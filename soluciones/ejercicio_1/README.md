@@ -86,3 +86,12 @@ az account show --query id -o tsv
 El cliente secreto lo sacamos dirigiendonos a nuestro Grupo de Recursos, luego a Azure Key Vault, luego objetos y en secretos escogemos el de nuestro Service Principal y veremos una key hacemos clic en ella y nos abriran las propiedades y valores de la key.
 
 ![Definiendo las variables de entorno](../../datos/imgs/eje1/img1_7.png)
+
+Luego de definirlas podemos verlas con el comando: 
+
+```powershell
+# Nos permite ver las variable de entorno filtrandolas por aquellas que empiecen por ARM_
+Get-ChildItem Env: | Where-Object { $_.Name -like "ARM_*" }
+```
+
+![Consultando las variables de entorno](../../datos/imgs/eje1/img1_8.png)
