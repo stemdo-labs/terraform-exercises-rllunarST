@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 module "vnet-roy1" {
-  source = "./modules"
+  source = "git::https://github.com/stemdo-labs/terraform-exercises-rllunarST.git//soluciones/ejercicio_5/ficheros/modules?ref=soluciones-rllm"
 
   vnet_name                    = var.vnet_name
   vnet_address_space           = var.vnet_address_space

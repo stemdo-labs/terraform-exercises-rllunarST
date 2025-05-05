@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 module "vnet-roy1" {
-  source = ""
+  source = "./modules"
 
   vnet_name                    = var.vnet_name
   vnet_address_space           = var.vnet_address_space
